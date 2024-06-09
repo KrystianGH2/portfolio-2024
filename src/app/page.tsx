@@ -1,9 +1,11 @@
-import Image from "next/image";
+import Hero from "./(components)/Hero";
+import MyProjects from "./(components)/MyProjects";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      
+    <main className="flex flex-col-reverse">
+      <MyProjects/>
+      <Hero />
     </main>
   );
 }

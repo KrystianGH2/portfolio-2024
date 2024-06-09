@@ -11,7 +11,16 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  scrollbar-color: var(--main-background-color);
+  scroll-behavior: smooth;
 }
+
+
+
+html::-webkit-scrollbar {
+  scrollbar-width: none !important;
+}
+
 
 body,
 h1,
@@ -34,12 +43,98 @@ h4 {
 }
 
 :root {
-  --main-background-color: #131313
+  --main-background-color: #131313;
+  --main-cta-color: #03D9C5;
+  
 }
 
 body {
   background-color: var(--main-background-color);
   min-height: 100vh;
-    line-height: 1.5;
-    color: white;
+  line-height: 1.5;
+  color: white;
+}
+
+
+
+.ulAnimationClose {
+  animation-name: ulAnimationClose;
+  animation-duration: 1s;
+  transition: transform 1s ease-in-out;
+}
+
+
+
+.ulAnimationClose {
+  animation-name: ulAnimationClose;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition: transform .5s ease-in-out;
+}
+
+@keyframes ulAnimationClose {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.ulAnimationOpacity {
+  animation-name: ulAnimationOpacity;
+  animation-duration: 1s;
+  transition: opacity 1s ease-in-out;
+}
+
+@keyframes ulAnimationOpacity {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.ulHidden {
+  display: none;
+}
+
+.ulFlex {
+  display: flex;
+}
+
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.959)
+}
+
+
+/* hero animation*/
+.heroAnimation {
+  animation-name: heroAnimation;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  transition: transform 1s ease-in-out;
+  opacity: 0;
+}
+
+@keyframes heroAnimation {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  
+  50% {
+    opacity: 0.4;
+  }
+  
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
