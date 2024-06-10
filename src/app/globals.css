@@ -53,6 +53,7 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   color: white;
+  font-family: "Open Sans", sans-serif;
 }
 
 
@@ -138,3 +139,5 @@ body {
     opacity: 1;
   }
 }
+
+
