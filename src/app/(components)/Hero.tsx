@@ -30,36 +30,46 @@ export default function Hero() {
     ];
 
     return (
-        <>
-            <div className="hero min-h-screen relative w-full">
-                <div className="absolute inset-0">
-                    <Image 
-                        src={fed2} 
-                        alt="coding background image overlay" 
-                        layout="fill" 
-                        objectFit="cover" 
-                        className="object-cover"
-                    />
-                </div>
-                <div className="hero-overlay bg-opacity-90 absolute inset-0"></div>
-                <div className="hero-content text-center text-neutral-content relative heroAnimation w-full flex flex-col justify-center items-center">
-                    <div className="max-w-7xl w-full flex flex-col justify-center items-center pb-24 gap-6">
-                        <h1 className="mb-5 md:text-5xl text-3xl font-bold">
-                            Hi!👋 I`m Krystian Cruz <br />A <span className='text-[var(--main-cta-color)]'>Front-end Developer</span>
-                        </h1>
-                        <p className="mb-5 w-full max-w-[700px]">
-                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
-                        </p>
-                        <div className="flex gap-6">
-                            {socialLinks.map((link) => (
-                                <a key={link.id} href={link.link} target="_blank" rel="noopener noreferrer" className='hover:text-[var(--main-cta-color)]'>
-                                    {link.icon}
-                                </a>
-                            ))}
-                        </div>
-                    </div>
-                </div>
+      <>
+        <div className="hero min-h-screen relative w-full">
+          <div className="absolute inset-0">
+            <Image
+              src={fed2}
+              alt="coding background image overlay"
+              layout="fill"
+              objectFit="cover"
+              className="object-cover"
+            />
+          </div>
+          <div className="hero-overlay bg-opacity-90 absolute inset-0"></div>
+          <div className="hero-content text-center text-neutral-content relative heroAnimation w-full flex flex-col justify-center items-center">
+            <div className="max-w-7xl w-full flex flex-col justify-center items-center pb-24 gap-6">
+              <h1 className="mb-5 md:text-5xl text-3xl font-bold">
+                Hi!👋 I`m Krystian Cruz <br />A{" "}
+                <span className="text-[var(--main-cta-color)]">
+                  Front-end Developer
+                </span>
+              </h1>
+              <p className="mb-5 w-full max-w-[700px]">
+                Welcome to my portfolio, where i showcase my work and
+                creativity.
+              </p>
+              <div className="flex gap-6">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.id}
+                    href={link.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[var(--main-cta-color)]"
+                  >
+                    {link.icon}
+                  </a>
+                ))}
+              </div>
             </div>
-        </>
+          </div>
+        </div>
+      </>
     );
 }
